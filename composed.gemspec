@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Tool for defining types or operations that are composed from other types."
   spec.description   = spec.description
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/dr0verride/composed"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -32,8 +32,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.14"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "guard", "~> 2.14.1"
-  spec.add_development_dependency "guard-rspec", "~> 4.7.3"
-  spec.add_development_dependency "byebug", "~> 9.0.6"
-  spec.add_development_dependency "benchmark-ips", "~> 2.7.2"
+  spec.add_development_dependency "guard", "~> 2.14"
+  spec.add_development_dependency "guard-rspec", "~> 4.7"
+  spec.add_development_dependency "byebug", "~> 9.0"
+  spec.add_development_dependency "benchmark-ips", "~> 2.7"
 end
