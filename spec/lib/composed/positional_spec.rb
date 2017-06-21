@@ -17,9 +17,9 @@ describe Composed do
       context "when injecting all positions" do
         let(:composed) do
           Composed(target) do
-            dep 1 { 2 }
+            dep(1) { 2 }
             dep { 3 }
-            dep 0 { 1 }
+            dep(0) { 1 }
           end
         end
 
@@ -42,8 +42,8 @@ describe Composed do
       context "when injecting some positions" do
         let(:composed) do
           Composed(target) do
-            dep 2 { 13 }
-            dep 1 { 12 }
+            dep(2) { 13 }
+            dep(1) { 12 }
           end
         end
 
@@ -68,9 +68,9 @@ describe Composed do
       context "when injecting all positions" do
         let(:composed) do
           Composed(target) do
-            dep 1 { 2 }
+            dep(1) { 2 }
             dep { 3 }
-            dep 0 { 1 }
+            dep(0) { 1 }
           end
         end
 
@@ -88,7 +88,7 @@ describe Composed do
       context "when injecting middle positions" do
         let(:composed) do
           Composed(target) do
-            dep 1 { 12 }
+            dep(1) { 12 }
           end
         end
 
@@ -106,7 +106,7 @@ describe Composed do
       context "when injecting tail positions" do
         let(:composed) do
           Composed(target) do
-            dep 1 { 12 }
+            dep(1){ 12 }
             dep { 13 }
           end
         end
