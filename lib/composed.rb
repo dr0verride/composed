@@ -64,6 +64,14 @@ class Composed
     @ctor = block
   end
 
+
+  def factory(method_name, &block)
+    bound = self.class.new(self,&block)
+    self.define_singleton_method(method_name) do |*args|
+      bound.new(*args)
+    end
+  end
+
   module Macro
     def Composed(*args, &block)
       Composed.new(*args,&block)
