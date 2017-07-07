@@ -16,9 +16,9 @@ describe Composed do
     context "when injecting all positions" do
       let(:composed) do
         Composed(target) do
-          dep(:second) { 2 }
-          dep(:third) { 3 }
-          dep(:first) { 1 }
+          dependency(:second) { 2 }
+          dependency(:third) { 3 }
+          dependency(:first) { 1 }
         end
       end
 
@@ -41,8 +41,8 @@ describe Composed do
     context "when injecting some positions" do
       let(:composed) do
         Composed(target) do
-          dep(:first) { 11 }
-          dep(:second) { 12 }
+          dependency(:first) { 11 }
+          dependency(:second) { 12 }
         end
       end
 

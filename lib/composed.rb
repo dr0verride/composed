@@ -38,20 +38,16 @@ class Composed
     object
   end
 
-  def define_dependency(keyword_or_idx = nil, &block)
+  def dependency(keyword_or_idx = nil, &block)
     case keyword_or_idx
-    when String
+    when String, Symbol
       @injected_kw_args[keyword_or_idx.to_sym] = block
-    when Symbol
-      @injected_kw_args[keyword_or_idx] = block
     when Integer
       @injected_pos_args[keyword_or_idx] = block
     else
       @injected_pos_args << block
     end
   end
-
-  alias_method :dep, :define_dependency
 
   def define_kw_dependency(keyword, block)
     raise ArgumentError, <<~ERROR if @injected_kw_args.key?(keyword)

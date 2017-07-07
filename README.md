@@ -18,8 +18,8 @@ end
 
 #lib/json_report.rb
 ImportantJSONReport = Composed(Report) do
-  dep(:output_format) { JSONFormatter.new }
-  dep(:filter) { ImportantStuffFilter.new }
+  dependency(:output_format) { JSONFormatter.new }
+  dependency(:filter) { ImportantStuffFilter.new }
 end
 
 #app/biz_report.rb

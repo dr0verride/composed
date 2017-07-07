@@ -16,16 +16,16 @@ describe Composed do
     context "when injecting all positions" do
       let(:composed) do
         Composed(target) do
-          dep(:first) { 1 }
+          dependency(:first) { 1 }
 
           factory(:specialized) do
-            dep(:second) { 2 }
-            dep(:third) { 3 }
+            dependency(:second) { 2 }
+            dependency(:third) { 3 }
           end
           
           factory(:other_version) do
-            dep(:second) { 222 }
-            dep(:third) { 333 }
+            dependency(:second) { 222 }
+            dependency(:third) { 333 }
           end
         end
       end
